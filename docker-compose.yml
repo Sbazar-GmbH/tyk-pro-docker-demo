@@ -20,7 +20,7 @@ services:
     image: tykio/portal:${PORTAL_VERSION:-v1.10.0}
     command: --bootstrap
     ports:
-      - 3006:3006
+      - 3007:3007
     environment:
       - PORTAL_LICENSEKEY=${DASH_LICENSE:?License key missing from Docker environment file "".env" file.  Review The Getting Started steps in README.md.}
     env_file:
