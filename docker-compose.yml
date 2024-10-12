@@ -6,7 +6,7 @@ services:
     environment:
       - TYK_DB_LICENSEKEY=${DASH_LICENSE:?License key missing from Docker environment file "".env" file.  Review The Getting Started steps in README.md.}
       - TYK_DB_STORAGE_MAIN_TYPE=postgres
-      - TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=user=postgres password=topsecretpassword host=tyk-postgres port=5432 database=tyk_analytics
+      - TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=user=postgres password=topsecretpassword host=tyk-postgres port=5433 database=tyk_analytics
     depends_on:
       tyk-postgres:
         condition: service_healthy
@@ -70,7 +70,7 @@ services:
       - POSTGRES_PASSWORD=topsecretpassword
 
     ports:
-      - "5432:5432"
+      - "5433:5433"
 
     volumes:
       - postgres-data:/var/lib/postgresql/data
