@@ -32,7 +32,7 @@ services:
     image: tykio/tyk-gateway:${GATEWAY_VERSION:-v5.4.0}
     container_name: tyk-gateway
     ports:
-      - "8080:8080"
+      - "8085:8085"
     env_file:
       - ./confs/tyk.env
     networks:
